@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ETYG | Entre Titulares y Goles</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f7;
+  color: #151515;
+}
+
+header {
+  background: #07152f;
+  color: white;
+  padding: 22px 18px 15px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.sublogo {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #d8b45b;
+  margin-top: 5px;
+}
+
+nav {
+  background: #0d2147;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 12px 8px;
+  overflow-x: auto;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.breaking {
+  background: #b00020;
+  color: white;
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 15px 50px;
+}
+
+.tag {
+  display: inline-block;
+  background: #b00020;
+  color: white;
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: 34px;
+  line-height: 1.08;
+  margin-bottom: 12px;
+}
+
+.intro {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #07152f, #193b70);
+  min-height: 260px;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-end;
+  padding: 22px;
+  color: white;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
+
+.hero h2 {
+  font-family: Georgia, serif;
+  font-size: 27px;
+  line-height: 1.15;
+}
+
+.hero p {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #ddd;
+}
+
+.section-title {
+  border-left: 5px solid #d8b45b;
+  padding-left: 10px;
+  font-size: 20px;
+  margin: 28px 0 15px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.07);
+}
+
+.card .category {
+  color: #b00020;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.card h3 {
+  font-family: Georgia, serif;
+  font-size: 21px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.date {
+  font-size: 10px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.poll {
+  background: #07152f;
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 25px;
+}
+
+.poll h3 {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.poll p {
+  color: #ddd;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.option {
+  background: white;
+  color: #111;
+  padding: 12px;
+  border-radius: 7px;
+  margin-top: 9px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+footer {
+  background: #07152f;
+  color: #aaa;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.footer-logo {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 7px;
+}
+
+.disclaimer {
+  margin-top: 12px;
+  color: #777;
+  font-size: 10px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 29px;
+  }
+
+  .hero h2 {
+    font-size: 23px;
+  }
+
+  .logo {
+    font-size: 36px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">ETYG</div>
+  <div class="sublogo">ENTRE TITULARES Y GOLES</div>
+</header>
+
+<nav>
+  <a href="#">INICIO</a>
+  <a href="#ultima">ÚLTIMA HORA</a>
+  <a href="#rosa">PRENSA ROSA</a>
+  <a href="#expediente">EXPEDIENTE</a>
+  <a href="#opinion">OPINIÓN</a>
+</nav>
+
+<div class="breaking">
+  🚨 ÚLTIMA HORA · EXCLUSIVA ETYG · 🚨
+</div>
+
+<main class="container">
+
+  <span class="tag">EXCLUSIVA ETYG</span>
+
+  <h1>
+    EL CAPÍTULO QUE PODRÍA CAMBIARLO TODO
+  </h1>
+
+  <p class="intro">
+    Nuevas pistas, miradas sospechosas y demasiadas preguntas sin respuesta.
+    La redacción de ETYG pone bajo la lupa los acontecimientos más comentados.
+  </p>
+
+  <section class="hero">
+    <div>
+      <h2>
+        ¿CASUALIDAD O ALGO MÁS?
+      </h2>
+      <p>
+        Una historia. Dos versiones. Y una pregunta que nadie quiere responder.
+      </p>
+    </div>
+  </section>
+
+  <h2 class="section-title" id="ultima">
+    📰 Última hora
+  </h2>
+
+  <article class="card">
+    <div class="category">Última hora</div>
+    <h3>
+      La escena que dejó a las lectoras intentando reconstruir los hechos
+    </h3>
+    <p>
+      Después de lo ocurrido, las teorías no han tardado en aparecer.
+      Estas son las preguntas que siguen sobre la mesa.
+    </p>
+    <div class="date">ETYG · REDACCIÓN</div>
+  </article>
+
+  <article class="card" id="rosa">
+    <div class="category">Prensa rosa</div>
+    <h3>
+      Las miradas que están dando mucho de qué hablar
+    </h3>
+    <p>
+      Hay encuentros que duran unos segundos, pero generan conversación
+      durante días. Y este podría ser uno de ellos.
+    </p>
+    <div class="date">ETYG · EXCLUSIVA</div>
+  </article>
+
+  <h2 class="section-title" id="expediente">
+    🔎 Expediente ETYG
+  </h2>
+
+  <article class="card">
+    <div class="category">Investigación</div>
+    <h3>
+      Lo que sabemos, lo que creemos y lo que todavía no podemos explicar
+    </h3>
+    <p>
+      La redacción ha separado los hechos de las teorías. Pero algunas
+      coincidencias siguen levantando sospechas.
+    </p>
+    <div class="date">EXPEDIENTE · ETYG</div>
+  </article>
+
+  <h2 class="section-title" id="opinion">
+    💬 El debate de las lectoras
+  </h2>
+
+  <div class="poll">
+    <h3>EL VAR DE LAS LECTORAS ⚽</h3>
+
+    <p>
+      Después de este capítulo, ¿qué teoría te convence más?
+    </p>
+
+    <div class="option">👀 Opción A · Aquí hay algo que no nos han contado</div>
+    <div class="option">🔥 Opción B · Todo tiene una explicación</div>
+    <div class="option">🤯 Opción C · Esto va a terminar en caos</div>
+    <div class="option">🕵️ Opción D · Tengo mi propia teoría</div>
+  </div>
+
+  <p class="disclaimer">
+    ETYG es un proyecto ficticio creado como parte del universo narrativo
+    de “Entre Titulares y Goles”. Los contenidos de esta página tienen
+    finalidad recreativa y no representan un medio de comunicación real.
+  </p>
+
+</main>
+
+<footer>
+  <div class="footer-logo">ETYG</div>
+  ENTRE TITULARES Y GOLES
+
+  <br><br>
+
+  📰 Donde cada historia merece un titular.
+
+  <br><br>
+
+  © 2026 ETYG · Proyecto de ficción
+</footer>
+
+</body>
+</html>
