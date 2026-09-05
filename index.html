@@ -7,352 +7,851 @@
 <title>ETYG | Entre Titulares y Goles</title>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f5f5f7;
-  color: #151515;
+body{
+    background:#f5f5f5;
+    color:#111;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-header {
-  background: #07152f;
-  color: white;
-  padding: 22px 18px 15px;
-  text-align: center;
+header{
+    background:#071936;
+    color:white;
+    text-align:center;
+    padding:28px 15px 22px;
 }
 
-.logo {
-  font-size: 42px;
-  font-weight: 900;
-  letter-spacing: 4px;
+.logo{
+    font-family:Georgia,serif;
+    font-size:58px;
+    font-weight:bold;
+    letter-spacing:8px;
 }
 
-.sublogo {
-  font-size: 12px;
-  letter-spacing: 3px;
-  color: #d8b45b;
-  margin-top: 5px;
+.subtitle{
+    color:#d7b65c;
+    letter-spacing:5px;
+    font-size:14px;
+    margin-top:8px;
 }
 
-nav {
-  background: #0d2147;
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  padding: 12px 8px;
-  overflow-x: auto;
+nav{
+    background:#071936;
+    border-top:1px solid #34445f;
+    border-bottom:4px solid #c40024;
+    display:flex;
+    justify-content:center;
+    overflow-x:auto;
+    white-space:nowrap;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: bold;
-  white-space: nowrap;
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    padding:14px 18px;
+    font-size:14px;
 }
 
-.breaking {
-  background: #b00020;
-  color: white;
-  padding: 10px 15px;
-  font-size: 12px;
-  font-weight: bold;
-  text-align: center;
+nav a:hover{
+    background:#c40024;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px 15px 50px;
+.breaking{
+    background:#c40024;
+    color:white;
+    text-align:center;
+    font-weight:bold;
+    padding:13px;
+    font-size:15px;
 }
 
-.tag {
-  display: inline-block;
-  background: #b00020;
-  color: white;
-  padding: 6px 10px;
-  font-size: 11px;
-  font-weight: bold;
-  margin-bottom: 12px;
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:25px 18px;
 }
 
-h1 {
-  font-family: Georgia, serif;
-  font-size: 34px;
-  line-height: 1.08;
-  margin-bottom: 12px;
+.date{
+    color:#777;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:10px;
 }
 
-.intro {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 18px;
+.main-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
 }
 
-.hero {
-  background: linear-gradient(135deg, #07152f, #193b70);
-  min-height: 260px;
-  border-radius: 12px;
-  display: flex;
-  align-items: flex-end;
-  padding: 22px;
-  color: white;
-  margin-bottom: 25px;
-  box-shadow: 0 8px 25px rgba(0,0,0,.15);
+.main-news{
+    background:white;
+    padding:25px;
+    border-top:7px solid #c40024;
 }
 
-.hero h2 {
-  font-family: Georgia, serif;
-  font-size: 27px;
-  line-height: 1.15;
+.tag{
+    display:inline-block;
+    background:#c40024;
+    color:white;
+    padding:7px 12px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:15px;
 }
 
-.hero p {
-  margin-top: 8px;
-  font-size: 13px;
-  color: #ddd;
+h1{
+    font-family:Georgia,serif;
+    font-size:48px;
+    line-height:1.02;
+    margin-bottom:15px;
 }
 
-.section-title {
-  border-left: 5px solid #d8b45b;
-  padding-left: 10px;
-  font-size: 20px;
-  margin: 28px 0 15px;
+.main-news h1 span{
+    color:#c40024;
 }
 
-.card {
-  background: white;
-  border-radius: 10px;
-  padding: 18px;
-  margin-bottom: 14px;
-  box-shadow: 0 3px 12px rgba(0,0,0,.07);
+.lead{
+    font-size:20px;
+    line-height:1.5;
+    color:#555;
+    margin-bottom:20px;
 }
 
-.card .category {
-  color: #b00020;
-  font-size: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 7px;
+.fake-photo{
+    height:300px;
+    background:linear-gradient(135deg,#071936,#183b6c);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-family:Georgia,serif;
+    font-size:32px;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
 }
 
-.card h3 {
-  font-family: Georgia, serif;
-  font-size: 21px;
-  line-height: 1.2;
-  margin-bottom: 8px;
+.side-news{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
 }
 
-.card p {
-  color: #666;
-  font-size: 13px;
-  line-height: 1.5;
+.news-card{
+    background:white;
+    padding:18px;
+    border-left:5px solid #c40024;
 }
 
-.date {
-  font-size: 10px;
-  color: #999;
-  margin-top: 10px;
+.news-card h2{
+    font-family:Georgia,serif;
+    font-size:23px;
+    line-height:1.1;
+    margin-bottom:8px;
 }
 
-.poll {
-  background: #07152f;
-  color: white;
-  border-radius: 12px;
-  padding: 20px;
-  margin-top: 25px;
+.news-card p{
+    color:#666;
+    line-height:1.4;
+    font-size:14px;
 }
 
-.poll h3 {
-  font-family: Georgia, serif;
-  font-size: 22px;
-  margin-bottom: 10px;
+.section-title{
+    margin:40px 0 20px;
+    border-bottom:4px solid #071936;
+    padding-bottom:8px;
+    font-family:Georgia,serif;
+    font-size:30px;
 }
 
-.poll p {
-  color: #ddd;
-  font-size: 13px;
-  line-height: 1.5;
+.section-title span{
+    color:#c40024;
 }
 
-.option {
-  background: white;
-  color: #111;
-  padding: 12px;
-  border-radius: 7px;
-  margin-top: 9px;
-  font-size: 13px;
-  font-weight: bold;
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-footer {
-  background: #07152f;
-  color: #aaa;
-  text-align: center;
-  padding: 25px 15px;
-  font-size: 11px;
-  line-height: 1.6;
+.article{
+    background:white;
+    border-bottom:5px solid #071936;
 }
 
-.footer-logo {
-  color: white;
-  font-size: 25px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  margin-bottom: 7px;
+.article-photo{
+    height:180px;
+    background:linear-gradient(135deg,#182f55,#c40024);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-family:Georgia,serif;
+    font-size:25px;
+    text-align:center;
+    padding:15px;
 }
 
-.disclaimer {
-  margin-top: 12px;
-  color: #777;
-  font-size: 10px;
+.article-content{
+    padding:18px;
 }
 
-@media (max-width: 600px) {
-  h1 {
-    font-size: 29px;
-  }
-
-  .hero h2 {
-    font-size: 23px;
-  }
-
-  .logo {
-    font-size: 36px;
-  }
+.article .tag{
+    margin-bottom:10px;
 }
+
+.article h3{
+    font-family:Georgia,serif;
+    font-size:24px;
+    line-height:1.1;
+    margin-bottom:10px;
+}
+
+.article p{
+    color:#666;
+    line-height:1.45;
+    font-size:14px;
+}
+
+.read{
+    display:inline-block;
+    margin-top:15px;
+    color:#c40024;
+    font-weight:bold;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.quote{
+    margin:35px 0;
+    background:#071936;
+    color:white;
+    padding:30px;
+    text-align:center;
+    font-family:Georgia,serif;
+    font-size:25px;
+    font-style:italic;
+}
+
+.quote small{
+    display:block;
+    margin-top:12px;
+    color:#d7b65c;
+    font-family:Arial;
+    font-style:normal;
+    font-size:12px;
+}
+
+.expediente{
+    background:white;
+    border:2px solid #071936;
+    padding:25px;
+}
+
+.expediente h2{
+    font-family:Georgia,serif;
+    font-size:34px;
+    margin-bottom:12px;
+}
+
+.expediente p{
+    line-height:1.6;
+    color:#555;
+}
+
+.questions{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.question{
+    padding:15px;
+    background:#f1f1f1;
+    border-left:4px solid #c40024;
+    font-weight:bold;
+}
+
+.most-read{
+    background:#fff;
+    padding:25px;
+}
+
+.most-read ol{
+    padding-left:25px;
+}
+
+.most-read li{
+    padding:12px 0;
+    border-bottom:1px solid #ddd;
+    font-family:Georgia,serif;
+    font-size:18px;
+}
+
+.poll{
+    background:#d7b65c;
+    padding:25px;
+    margin-top:35px;
+}
+
+.poll h2{
+    font-family:Georgia,serif;
+    margin-bottom:15px;
+}
+
+.poll label{
+    display:block;
+    background:white;
+    padding:12px;
+    margin:8px 0;
+}
+
+footer{
+    background:#071936;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:50px;
+}
+
+footer strong{
+    color:#d7b65c;
+}
+
+.disclaimer{
+    max-width:700px;
+    margin:15px auto 0;
+    color:#aaa;
+    font-size:11px;
+    line-height:1.5;
+}
+
+@media(max-width:800px){
+
+    .logo{
+        font-size:43px;
+        letter-spacing:6px;
+    }
+
+    .subtitle{
+        font-size:11px;
+        letter-spacing:3px;
+    }
+
+    nav{
+        justify-content:flex-start;
+    }
+
+    nav a{
+        padding:13px 14px;
+        font-size:12px;
+    }
+
+    .container{
+        padding:18px 14px;
+    }
+
+    .main-grid{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:38px;
+    }
+
+    .lead{
+        font-size:17px;
+    }
+
+    .fake-photo{
+        height:230px;
+        font-size:25px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .questions{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:26px;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">ETYG</div>
-  <div class="sublogo">ENTRE TITULARES Y GOLES</div>
+
+<div class="logo">ETYG</div>
+
+<div class="subtitle">
+ENTRE TITULARES Y GOLES
+</div>
+
 </header>
 
 <nav>
-  <a href="#">INICIO</a>
-  <a href="#ultima">ÚLTIMA HORA</a>
-  <a href="#rosa">PRENSA ROSA</a>
-  <a href="#expediente">EXPEDIENTE</a>
-  <a href="#opinion">OPINIÓN</a>
+
+<a href="#inicio">INICIO</a>
+<a href="#ultima">ÚLTIMA HORA</a>
+<a href="#deportes">DEPORTES</a>
+<a href="#rosa">PRENSA ROSA</a>
+<a href="#expediente">EXPEDIENTE</a>
+<a href="#opinion">OPINIÓN</a>
+
 </nav>
 
 <div class="breaking">
-  🚨 ÚLTIMA HORA · EXCLUSIVA ETYG · 🚨
+🚨 ÚLTIMA HORA · EXCLUSIVA ETYG · 🚨
 </div>
 
-<main class="container">
+<main class="container" id="inicio">
 
-  <span class="tag">EXCLUSIVA ETYG</span>
+<div class="date">
+ETYG · EDICIÓN DIGITAL · 4 DE SEPTIEMBRE DE 2026
+</div>
 
-  <h1>
-    EL CAPÍTULO QUE PODRÍA CAMBIARLO TODO
-  </h1>
+<div class="main-grid">
 
-  <p class="intro">
-    Nuevas pistas, miradas sospechosas y demasiadas preguntas sin respuesta.
-    La redacción de ETYG pone bajo la lupa los acontecimientos más comentados.
-  </p>
+<section class="main-news" id="ultima">
 
-  <section class="hero">
-    <div>
-      <h2>
-        ¿CASUALIDAD O ALGO MÁS?
-      </h2>
-      <p>
-        Una historia. Dos versiones. Y una pregunta que nadie quiere responder.
-      </p>
-    </div>
-  </section>
+<div class="tag">
+EXCLUSIVA ETYG
+</div>
 
-  <h2 class="section-title" id="ultima">
-    📰 Última hora
-  </h2>
+<h1>
+EL CAPÍTULO QUE <span>PODRÍA CAMBIARLO TODO</span>
+</h1>
 
-  <article class="card">
-    <div class="category">Última hora</div>
-    <h3>
-      La escena que dejó a las lectoras intentando reconstruir los hechos
-    </h3>
-    <p>
-      Después de lo ocurrido, las teorías no han tardado en aparecer.
-      Estas son las preguntas que siguen sobre la mesa.
-    </p>
-    <div class="date">ETYG · REDACCIÓN</div>
-  </article>
+<p class="lead">
+Nuevas pistas, miradas sospechosas y demasiadas preguntas sin respuesta.
+La redacción de ETYG pone bajo la lupa los acontecimientos que todos están comentando.
+</p>
 
-  <article class="card" id="rosa">
-    <div class="category">Prensa rosa</div>
-    <h3>
-      Las miradas que están dando mucho de qué hablar
-    </h3>
-    <p>
-      Hay encuentros que duran unos segundos, pero generan conversación
-      durante días. Y este podría ser uno de ellos.
-    </p>
-    <div class="date">ETYG · EXCLUSIVA</div>
-  </article>
+<div class="fake-photo">
+¿CASUALIDAD<br>
+O ALGO MÁS?
+</div>
 
-  <h2 class="section-title" id="expediente">
-    🔎 Expediente ETYG
-  </h2>
+<p style="margin-top:18px;line-height:1.6;color:#555;">
+Una historia puede cambiar completamente cuando aparecen nuevas piezas.
+Y esta vez, hay demasiadas coincidencias para ignorarlas.
+</p>
 
-  <article class="card">
-    <div class="category">Investigación</div>
-    <h3>
-      Lo que sabemos, lo que creemos y lo que todavía no podemos explicar
-    </h3>
-    <p>
-      La redacción ha separado los hechos de las teorías. Pero algunas
-      coincidencias siguen levantando sospechas.
-    </p>
-    <div class="date">EXPEDIENTE · ETYG</div>
-  </article>
+<a class="read" href="#expediente">
+LEER LA HISTORIA COMPLETA →
+</a>
 
-  <h2 class="section-title" id="opinion">
-    💬 El debate de las lectoras
-  </h2>
+</section>
 
-  <div class="poll">
-    <h3>EL VAR DE LAS LECTORAS ⚽</h3>
+<aside class="side-news">
 
-    <p>
-      Después de este capítulo, ¿qué teoría te convence más?
-    </p>
+<div class="news-card">
 
-    <div class="option">👀 Opción A · Aquí hay algo que no nos han contado</div>
-    <div class="option">🔥 Opción B · Todo tiene una explicación</div>
-    <div class="option">🤯 Opción C · Esto va a terminar en caos</div>
-    <div class="option">🕵️ Opción D · Tengo mi propia teoría</div>
-  </div>
+<div class="tag">PRENSA ROSA</div>
 
-  <p class="disclaimer">
-    ETYG es un proyecto ficticio creado como parte del universo narrativo
-    de “Entre Titulares y Goles”. Los contenidos de esta página tienen
-    finalidad recreativa y no representan un medio de comunicación real.
-  </p>
+<h2>
+¿ALESSIA Y BELLINGHAM, OTRA VEZ JUNTOS?
+</h2>
+
+<p>
+Su presencia en el Bernabéu volvió a despertar preguntas.
+Pero hubo un detalle que llamó especialmente la atención.
+</p>
+
+<a class="read" href="#rosa">LEER MÁS →</a>
+
+</div>
+
+<div class="news-card">
+
+<div class="tag">POLÉMICA</div>
+
+<h2>
+¿PERIODISTA O FAN?
+</h2>
+
+<p>
+Meryem vuelve al centro de la conversación después de una serie de imágenes que dividieron las opiniones.
+</p>
+
+<a class="read" href="#rosa">LEER MÁS →</a>
+
+</div>
+
+<div class="news-card">
+
+<div class="tag">REAL MADRID</div>
+
+<h2>
+LA NOCHE QUE JUDE VIVIÓ DESDE FUERA
+</h2>
+
+<p>
+No pudo estar sobre el terreno de juego, pero terminó siendo parte de una celebración inolvidable.
+</p>
+
+<a class="read" href="#deportes">LEER MÁS →</a>
+
+</div>
+
+</aside>
+
+</div>
+
+
+<section id="deportes">
+
+<h2 class="section-title">
+⚽ <span>DEPORTES</span> · REAL MADRID
+</h2>
+
+<div class="cards">
+
+<article class="article">
+
+<div class="article-photo">
+REAL MADRID<br>CAMPEÓN
+</div>
+
+<div class="article-content">
+
+<div class="tag">
+LA FINAL
+</div>
+
+<h3>
+Un título que refuerza el proyecto blanco
+</h3>
+
+<p>
+El equipo vuelve a celebrar una noche histórica.
+Jude siguió la final desde fuera y vivió el triunfo de una manera diferente.
+</p>
+
+<a class="read" href="#">LEER MÁS →</a>
+
+</div>
+
+</article>
+
+
+<article class="article">
+
+<div class="article-photo">
+FIESTA<br>BLANCA
+</div>
+
+<div class="article-content">
+
+<div class="tag">
+CELEBRACIÓN
+</div>
+
+<h3>
+La noche que nadie quiso perderse
+</h3>
+
+<p>
+Cena, música, invitados y una celebración que se extendió mucho después del partido.
+</p>
+
+<a class="read" href="#">LEER MÁS →</a>
+
+</div>
+
+</article>
+
+
+<article class="article">
+
+<div class="article-photo">
+JUGADORES<br>Y FAMILIA
+</div>
+
+<div class="article-content">
+
+<div class="tag">
+TRAS LA FINAL
+</div>
+
+<h3>
+El vestuario también tiene historias
+</h3>
+
+<p>
+Más allá del trofeo, las imágenes dejaron ver la unión entre jugadores, amigos y familiares.
+</p>
+
+<a class="read" href="#">LEER MÁS →</a>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+
+<div class="quote">
+
+“Las victorias también se celebran en equipo.
+Pero algunas historias comienzan precisamente cuando termina el partido.”
+
+<small>
+— ETYG · ENTRE TITULARES Y GOLES
+</small>
+
+</div>
+
+
+<section id="rosa">
+
+<h2 class="section-title">
+💋 <span>PRENSA ROSA</span> · LO QUE TODOS ESTÁN COMENTANDO
+</h2>
+
+<div class="cards">
+
+<article class="article">
+
+<div class="article-photo">
+¿AMISTAD<br>O ALGO MÁS?
+</div>
+
+<div class="article-content">
+
+<div class="tag">
+BOMBAZO
+</div>
+
+<h3>
+Alessia reaparece y las preguntas regresan
+</h3>
+
+<p>
+La presencia de Alessia en el palco volvió a generar especulaciones.
+Lo curioso: no hubo encuentro entre ambos.
+</p>
+
+<a class="read" href="#">LEER MÁS →</a>
+
+</div>
+
+</article>
+
+
+<article class="article">
+
+<div class="article-photo">
+MER YEM<br>BAJO LA LUPA
+</div>
+
+<div class="article-content">
+
+<div class="tag">
+POLÉMICA
+</div>
+
+<h3>
+Meryem: de crítica a protagonista
+</h3>
+
+<p>
+La periodista que cuestionó a Jude vuelve a estar en el centro de la conversación.
+Esta vez, por una fotografía.
+</p>
+
+<a class="read" href="#">LEER MÁS →</a>
+
+</div>
+
+</article>
+
+
+<article class="article">
+
+<div class="article-photo">
+LA FOTO<br>QUE ENCENDIÓ TODO
+</div>
+
+<div class="article-content">
+
+<div class="tag">
+VIRAL
+</div>
+
+<h3>
+Una camiseta, una fotografía y demasiadas teorías
+</h3>
+
+<p>
+Las imágenes comenzaron a circular y las redes hicieron el resto.
+¿Hay realmente algo detrás?
+</p>
+
+<a class="read" href="#">LEER MÁS →</a>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+
+<section id="expediente">
+
+<h2 class="section-title">
+🔎 <span>EXPEDIENTE ETYG</span>
+</h2>
+
+<div class="expediente">
+
+<h2>
+Las preguntas que nadie ha podido responder
+</h2>
+
+<p>
+En ETYG no nos quedamos únicamente con la fotografía.
+Repasamos los hechos, las coincidencias y los detalles que podrían cambiar
+la interpretación de lo ocurrido.
+</p>
+
+<div class="questions">
+
+<div class="question">
+¿Quién sabía que Meryem estaría allí?
+</div>
+
+<div class="question">
+¿Por qué aquella fotografía ocurrió precisamente esa noche?
+</div>
+
+<div class="question">
+¿Por qué Jude mantuvo la distancia?
+</div>
+
+<div class="question">
+¿Hay algo que todavía no conocemos?
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2 class="section-title">
+🔥 <span>LO MÁS LEÍDO</span>
+</h2>
+
+<div class="most-read">
+
+<ol>
+
+<li>
+¿Periodista o fan? Meryem vuelve al centro de la polémica
+</li>
+
+<li>
+¿Alessia y Bellingham, otra vez juntos?
+</li>
+
+<li>
+La noche de la Fiesta Blanca
+</li>
+
+<li>
+Jude y la final que tuvo que mirar desde fuera
+</li>
+
+<li>
+La fotografía que dividió a las redes
+</li>
+
+</ol>
+
+</div>
+
+</section>
+
+
+<section id="opinion">
+
+<div class="poll">
+
+<h2>
+🗣️ LA PREGUNTA ETYG
+</h2>
+
+<p>
+Después de todo lo ocurrido… ¿tú qué crees?
+</p>
+
+<label>
+<input type="radio" name="opinion">
+ Todo fue una coincidencia
+</label>
+
+<label>
+<input type="radio" name="opinion">
+ Aquí hay algo que todavía no sabemos
+</label>
+
+<label>
+<input type="radio" name="opinion">
+ Las redes están exagerando
+</label>
+
+<label>
+<input type="radio" name="opinion">
+ Necesitamos el próximo capítulo YA 👀
+</label>
+
+</div>
+
+</section>
 
 </main>
 
+
 <footer>
-  <div class="footer-logo">ETYG</div>
-  ENTRE TITULARES Y GOLES
 
-  <br><br>
+<strong>ETYG</strong><br>
 
-  📰 Donde cada historia merece un titular.
+Entre Titulares y Goles
 
-  <br><br>
+<div class="disclaimer">
 
-  © 2026 ETYG · Proyecto de ficción
+Proyecto editorial ficticio creado para el universo narrativo de ETYG.
+Los nombres, situaciones, titulares y acontecimientos forman parte de una
+obra de ficción y no pretenden presentar información periodística real.
+
+</div>
+
 </footer>
 
 </body>
